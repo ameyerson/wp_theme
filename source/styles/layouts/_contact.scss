@@ -1,0 +1,72 @@
+.gform_wrapper {
+	margin: 20px 0 30px;
+
+	.gform_fields {
+		@extend .row;
+	}
+	.gfield {
+		clear: none;
+
+		&:nth-child(odd) {
+      		clear: both;
+      	}
+	}
+}
+
+.comment-form input[type="email"], 
+.comment-form input[type="text"], 
+.comment-form input[type="url"], 
+.comment-form textarea, 
+.form-control, 
+.ginput_container input[type="date"], 
+.ginput_container input[type="email"], 
+.ginput_container input[type="number"], 
+.ginput_container input[type="password"], 
+.ginput_container input[type="tel"], 
+.ginput_container input[type="text"], 
+.ginput_container input[type="url"], 
+.ginput_container select, 
+.ginput_container textarea, 
+.search-form .search-field {
+	outline: none;
+	border-radius: 0;
+	border: 1px solid $border-color;
+	box-shadow: none;
+	color: $text-color;
+}
+label {
+	@extend .h3;
+	font-size: 14px !important;
+
+	.gfield_required {
+		color: inherit;
+	}
+}
+.gform_footer {
+	text-align: center;
+}
+.gform_button {
+	@extend .btn-secondary;
+/*	width: 100%;*/
+}
+.contact-section .gform_button {
+	width: 100%;
+}
+.ginput_complex  {
+	border-left: 0;
+	padding: 0;
+
+	@media (min-width: $screen-sm-min) {
+		
+		margin-left: -15px;
+		margin-right: -15px;
+
+		.name_first,
+		.name_last {
+			display: block;
+			float: left;
+			width: 50%;
+			padding: 0 15px;
+		}
+	} 
+}
